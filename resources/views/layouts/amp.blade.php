@@ -11,6 +11,7 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <style amp-custom>
     /* any custom style goes here */
     body {
@@ -33,6 +34,10 @@
       padding: 0.5em;
       background: white;
       box-shadow: 0px 3px 5px grey;
+    }
+
+    h2 {
+      padding-left: 15px;
     }
 
     p {
@@ -103,10 +108,63 @@
     font-size: 2em;
     padding-bottom: 60px;
     }
-    .fa-heart {
+    .fa {
     padding-top: 60px;
     font-size:5em;
     }
+    .parent > div {
+      text-align: center;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+    .parent > h3 {
+      padding-left: 10px;
+    }
+    .parent {
+      background-color: rgba(0, 0, 0, .9);
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      color: white;
+    }
+    .yellow-strip {
+      border-left: 5px solid yellow;
+    }
+    .red-strip {
+      border-left: 5px solid red;
+    }
+    .parent > div {
+      vertical-align: top;
+    }
+    .carousel-content {
+      padding: 25px;
+    }
+
+    .icon {
+      text-align: center;
+    }
+
+    amp-carousel {
+      background-color: rgba(0, 0, 0, .9);
+      color: white;
+    }
+
+    .footer a:link {
+      text-decoration: none;
+      
+    }
+    .footer ul {
+      list-style-type: none;
+    }
+    .footer li {
+      padding-bottom: 10px;
+    }
+    .footer {
+      background-color: rgba(0, 0, 0, .2);
+      padding: 10px;
+    }
+
     </style>      
   </head>
   <body>
@@ -145,5 +203,27 @@
     height="33"></amp-social-share>
 </p>
     @yield('content')
+
+  <div class="footer">
+    <h4>ADDITIONAL INFO</h4>
+      <ul>
+        <li><a href="#">Corporate Social Responsibility</a></li>
+        <li><a href="#">News & Articles</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    <h4>CONSUMER RIGHTS</h4>
+    <ul>
+      <li><a href="#">working With Third Parties</a></li>
+      <li><a href="#">PAIA Manual</a></li>
+      <li><a href="#">Consumer Protection Act</a></li>
+    </ul>
+    <h4>LEGAL</h4>
+    <ul>
+      <li><a href="#">Disclaimer</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+    </ul>
+
+  </div>  
   </body>
 </html>
